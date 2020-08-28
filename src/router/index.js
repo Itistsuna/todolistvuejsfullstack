@@ -1,15 +1,26 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Addform from '@/Addform'
+import ListTodo from '@/todo'
 
-Vue.use(Router)
+const routes = [
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
-})
+  {
+    path: '/new',
+    component: Addform
+  },
+  {
+    path: '/todo',
+    component: ListTodo,
+    props: {whatToDisplay:"all"}
+  },
+  {
+    path: '/done',
+    component: ListTodo,
+    props: {whatToDisplay:"done"}
+  },
+  {
+    path:'/',
+    component: ListTodo,
+    props: {whatToDisplay:"todo"}
+  }
+]
+export default routes;

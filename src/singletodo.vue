@@ -15,7 +15,7 @@ export default {
   props: ['item'],
   methods: {
     toggle (item) {
-      this.$parent.$parent.$emit('toggle', item.id)
+      this.$emit('toggle', item.id)
     }
   }
 }
@@ -23,10 +23,10 @@ export default {
 
 <style>
 li {
-  margin-left: 43.5%;
+  margin-left: 40%;
   list-style: none;
   cursor: pointer;
-  width: 200px;
+  width: 20%;
 }
 .barré {
   text-decoration: line-through;
