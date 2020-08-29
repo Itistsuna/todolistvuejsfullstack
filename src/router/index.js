@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/todo',
     component: ListTodo,
-    props: {whatToDisplay:"all"}
+    props: {whatToDisplay:"todo"}
   },
   {
     path: '/done',
@@ -20,7 +20,7 @@ const routes = [
   {
     path:'/',
     component: ListTodo,
-    props: {whatToDisplay:"todo"}
+    props: {whatToDisplay:"all"}
   }
 ]
 export default routes;
